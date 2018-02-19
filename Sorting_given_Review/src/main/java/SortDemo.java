@@ -53,12 +53,12 @@ public class SortDemo extends Applet {
                                 
                 choiceBtn = new Choice();
                 choiceBtn.setFont(new Font("Times", Font.PLAIN, 18));
-                choiceBtn.addItem("  Bubble Sort  ");
-                choiceBtn.addItem("  Selection Sort  ");
-                choiceBtn.addItem("  Insertion Sort  ");
-                choiceBtn.addItem("  Merge Sort  ");
-                choiceBtn.addItem("  Quick Sort  ");
-                choiceBtn.addItem("  Heap Sort  ");
+                choiceBtn.addItem("Bubble Sort ");
+                choiceBtn.addItem("Selection Sort ");
+                choiceBtn.addItem("Insertion Sort ");
+                choiceBtn.addItem("Merge Sort ");
+                choiceBtn.addItem("Quick Sort ");
+                choiceBtn.addItem("Heap Sort ");
                 choiceBtn.setSize(2000,500);
                 System.out.println(choiceBtn.getSize().toString());
                 p2.add(choiceBtn);
