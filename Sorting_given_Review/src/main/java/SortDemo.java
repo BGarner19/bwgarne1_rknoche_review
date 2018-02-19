@@ -35,9 +35,11 @@ public class SortDemo extends Applet {
         
         // setup the graphical user interface components
         public void init() {
+        	
+        	int _FONTSIZE = 18;
                 setSize(700, 600);
                 setLayout(new FlowLayout(FlowLayout.LEFT));
-                setFont(new Font("Courier", Font.PLAIN, 18));
+                setFont(new Font("Courier", Font.PLAIN, _FONTSIZE));
         
                 p1 = new Panel();
                 p2 = new Panel();
@@ -52,19 +54,19 @@ public class SortDemo extends Applet {
                
                                 
                 choiceBtn = new Choice();
-                choiceBtn.setFont(new Font("Times", Font.PLAIN, 18));
-                choiceBtn.addItem("  Bubble Sort  ");
-                choiceBtn.addItem("  Selection Sort  ");
-                choiceBtn.addItem("  Insertion Sort  ");
-                choiceBtn.addItem("  Merge Sort  ");
-                choiceBtn.addItem("  Quick Sort  ");
-                choiceBtn.addItem("  Heap Sort  ");
+                choiceBtn.setFont(new Font("Times", Font.PLAIN, _FONTSIZE));
+                choiceBtn.addItem("Bubble Sort ");
+                choiceBtn.addItem("Selection Sort ");
+                choiceBtn.addItem("Insertion Sort ");
+                choiceBtn.addItem("Merge Sort ");
+                choiceBtn.addItem("Quick Sort ");
+                choiceBtn.addItem("Heap Sort ");
                 choiceBtn.setSize(2000,500);
                 System.out.println(choiceBtn.getSize().toString());
                 p2.add(choiceBtn);
             
                 startBtn = new Button("  Start  ");
-                startBtn.setFont(new Font("Times", Font.PLAIN, 18));	
+                startBtn.setFont(new Font("Times", Font.PLAIN, _FONTSIZE));	
                 startBtn.addActionListener(new ActionListener(){
                         public void actionPerformed(ActionEvent e){
                                 runDemo();
