@@ -127,9 +127,9 @@ public class SortDemoData  {
                                 outputBuf.append(
                                         i + ": " 
                                           + Integer.toString( 
-                                                       copyOfMyArray[i].key)  
+                                                       copyOfMyArray[i].getKey())  
                                           + " --> "
-                                          + Integer.toString(myArray[i].key) 
+                                          + Integer.toString(myArray[i].getKey()) 
                                           + "\n");
                         }
                         outputBuf.append("\r");
