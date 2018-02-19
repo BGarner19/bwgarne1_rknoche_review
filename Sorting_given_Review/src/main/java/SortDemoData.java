@@ -23,37 +23,37 @@ public class SortDemoData  {
 
                 String str = "";
                     
-                int n; // will be the length of myArray        
+                int arraySize; // will be the length of myArray        
                 if (inputTokens.hasMoreTokens()) {
-                        n = inputTokens.countTokens(); 
+                        arraySize = inputTokens.countTokens(); 
                 } else {
                         throw new NoSuchElementException();
                 }
 
                 // define the array of the right length n    
-                if (n == 1) { 
+                if (arraySize == 1) { 
 
                         // interpret the next number as number of entries and 
                         // generate a random vector with entries 1 ... n
                         str = inputTokens.nextToken(); 
-                        n =  Integer.valueOf(str).intValue(); 
+                        arraySize =  Integer.valueOf(str).intValue(); 
                         // may throw NegativeArraySizeException
-                        myArray = new Item[n];
-                        boolean[] tempArray = new boolean[n + 1];
+                        myArray = new Item[arraySize];
+                        boolean[] tempArray = new boolean[arraySize + 1];
                         RandomNumber randGen = new RandomNumber();
                         int randNr;
-                        for (int i = 0; i < n; i++) {
+                        for (int i = 0; i < arraySize; i++) {
                                 do 
-                                        randNr = randGen.nextIntRand(1, n);
+                                        randNr = randGen.nextIntRand(1, arraySize);
                                 while (tempArray[randNr]);                  
                                 tempArray[randNr] = true;
                                 myArray[i] = new Item(randNr);
                         }
                 } else {           
-                        Item [] array = new Item[n];
+                        Item [] array = new Item[arraySize];
                         int count =0;
                         // read the n numbers into the array
-                        for (int i = 0; i < n; i++) {
+                        for (int i = 0; i < arraySize; i++) {
                         	
 
                                 str = result[i];
@@ -67,8 +67,8 @@ public class SortDemoData  {
 
                                 
                         }
-                        myArray = new Item[n-count];
-                        myArray = Arrays.copyOfRange(array, 0, n-count);
+                        myArray = new Item[arraySize-count];
+                        myArray = Arrays.copyOfRange(array, 0, arraySize-count);
                         
                         
                } 
