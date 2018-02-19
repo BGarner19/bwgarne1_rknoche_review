@@ -128,10 +128,13 @@ public class SortDemo extends Applet {
                 
                  } catch (NoSuchElementException e) {
        			 System.out.println("Not enough numbers.");
+       			 output.setText("Not enough numbers.");
 	       	     } catch (NumberFormatException e) {
 	       	    	 System.out.println("Please only use integer values. ");
+	       	    	 output.setText("Please only use integer values.");
 	       	     } catch (NegativeArraySizeException e) {
 	       	    	 System.out.println("Negative Array Size.");
+	       	    	 output.setText("Please only use integer values.");
 	       	     }      
         }        		
 }
